@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Google Maps Seas and Straits Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 style="padding-bottom: 15px;">World Seas and Straits Quiz</h1>
+  <input id="game-input" placeholder="Type a sea or strait's name..." />
+  <button id="give-up-button">Give Up</button>
+  <div id="progress">0 / 38 guessed</div>
+  <div id="map"></div>
+
+  <script src="seastrait.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDdHgL-qvVWgxDKOfiH9Ki2f69-RpD9Z0&callback=initMap" async defer></script>
+  <script src="script.js"></script>
+</body>
+</html>

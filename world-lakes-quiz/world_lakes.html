@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Google Maps Lakes Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 style="padding-bottom: 15px;">World Lakes Quiz</h1>
+  <input id="game-input" placeholder="Type a lake name..." />
+  <button id="give-up-button">Give Up</button>
+  <div id="progress">0 / 38 guessed</div>
+  <div id="map"></div>
+
+  <script src="lakes.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDdHgL-qvVWgxDKOfiH9Ki2f69-RpD9Z0&callback=initMap" async defer></script>
+  <script src="script.js"></script>
+</body>
+</html>
