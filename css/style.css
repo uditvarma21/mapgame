@@ -1,0 +1,95 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: sans-serif;
+    overflow: hidden;
+  }
+  
+  /* Full-screen map */
+  #map {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  /* Overlay container */
+  .map-overlay {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    padding: 20px; /* Add padding around the container */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    z-index: 5;
+  }
+  
+  /* Input field styled like Google Maps */
+  #game-input {
+    width: 300px;
+    max-width: 80vw;
+    padding: 10px 14px;
+    font-size: 16px;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    margin-bottom: 12px; /* Add spacing between input and button */
+  }
+  
+  /* Give Up button */
+  #give-up-button {
+    padding: 8px 14px;
+    font-size: 14px;
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 12px; /* Ensure consistent spacing */
+  }
+  
+  #give-up-button:hover {
+    background-color: #357ae8;
+  }
+  
+  /* Progress text */
+  #progress {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .map-overlay {
+      width: 90%;
+      left: 5%;
+      transform: none;
+      align-items: stretch;
+    }
+  
+    #game-input {
+      width: 80%;
+    }
+  
+    #give-up-button {
+      width: 80%;
+      
+    }
+  
+    #progress {
+      text-align: center;
+    }
+  }
