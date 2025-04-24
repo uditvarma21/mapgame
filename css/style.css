@@ -18,7 +18,7 @@ html, body {
   z-index: 0;
 }
 
-/* Container is transparent, for layout only */
+/* Transparent container for layout only */
 .container {
   background: transparent;
   border: none;
@@ -30,6 +30,25 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* Optional if you still use a map-overlay container */
+.map-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: transparent;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+.map-overlay * {
+  pointer-events: auto;
 }
 
 /* Floating title */
