@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8 /">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Google Maps India Biosphere Reserve Quiz</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="map"></div>
-  <div class="map-overlay">
-  <h1 style="padding-bottom: 15px;">India Biosphere Reserve Quiz</h1>
-  <input id="game-input" placeholder="Type a Biosphere Reserve's name..." />
-  <button id="give-up-button">Give Up</button>
-  <div id="progress">0 / 18 guessed</div>
+  <div class="container">
+    <h1 style="padding-bottom: 15px;">India Biosphere Reserve Quiz</h1>
+    <input id="game-input" placeholder="Type a Biosphere Reserve's name..." />
+    <button id="give-up-button">Give Up</button>
+    <div id="progress">0 / 18 guessed</div>
+    <div id="map"></div>
   </div>
+  <footer>
+    <p>Powered by Google Maps API</p>
+  </footer>
   <script src="biosphere_reserve.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDdHgL-qvVWgxDKOfiH9Ki2f69-RpD9Z0&callback=initMap" async defer></script>
   <script src="script.js"></script>

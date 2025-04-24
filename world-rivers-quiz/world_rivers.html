@@ -2,17 +2,21 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Google Maps Rivers Quiz</title>
-  <link rel="stylesheet" href="../css/style.cs">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1 style="padding-bottom: 15px;">World Rivers Quiz</h1>
-  <div id="game-container">
+  <!-- Full-screen map -->
+  <div id="map"></div>
+
+  <!-- Overlay UI -->
+  <div class="map-overlay">
+    <h1 style="padding-bottom: 15px;">World Rivers Quiz</h1>
     <input id="game-input" type="text" placeholder="Enter your guess..." />
     <button id="give-up-button">Give Up</button>
-    <div id="map"></div>
+    <div id="progress">0 / X guessed</div>
   </div>
-  
 
   <script src="rivers.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDdHgL-qvVWgxDKOfiH9Ki2f69-RpD9Z0&callback=initMap" async defer></script>
