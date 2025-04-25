@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>India Biosphere Reserve Quiz</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* Inline styles added for clarity; can also go in style.css */
+
+    /* Rainfall toggle in top-right */
+    .top-right-controls {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 10px 15px;
+      border-radius: 8px;
+      z-index: 5;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+    }
+
+    #toggle-rainfall {
+      padding: 8px 14px;
+      font-size: 14px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #toggle-rainfall:hover {
+      background-color: #45a049;
+    }
+
+    .legend {
+      font-size: 12px;
+      background: white;
+      padding: 10px;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    }
+
+    .legend-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      margin: 2px 0;
+    }
+
+    .legend-color {
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;
+      border: 1px solid #999;
+    }
+  </style>
+</head>
+<body>
+  <!-- Full-screen map -->
+  <div id="map"></div>
+
+  <!-- Top-right toggle and legend -->
+  <div class="top-right-controls">
+    <button id="toggle-rainfall">Toggle Rainfall Mode</button>
+    <div class="legend">
+      <div class="legend-title">Rainfall (mm)</div>
+      <div class="legend-item"><div class="legend-color" style="background:#ffff00"></div><div>≤ 600</div></div>
+      <div class="legend-item"><div class="legend-color" style="background:#e0c385"></div><div>≤ 1000</div></div>
+      <div class="legend-item"><div class="legend-color" style="background:#b2d8b2"></div><div>≤ 1500</div></div>
+      <div class="legend-item"><div class="legend-color" style="background:#66bb66"></div><div>≤ 2000</div></div>
+      <div class="legend-item"><div class="legend-color" style="background:#339966"></div><div>≤ 2500</div></div>
+      <div class="legend-item"><div class="legend-color" style="background:#228B22"></div><div>≤ 3000</div></div>
+      <div class="legend-item"><div class="legend-color" style="background:#145214"></div><div>> 3000</div></div>
+    </div>
+  </div>
+
+  <!-- Main overlay with input and game logic -->
+  <div class="map-overlay">
+    <h1 style="padding-bottom: 15px;">India Biosphere Reserve Quiz</h1>
+    <input id="game-input" type="search" placeholder="Type a Biosphere Reserve's name..." />
+    <button id="give-up-button">Give Up</button>
+    <div id="progress">0 / 18 guessed</div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="indian_mnts_n_rain.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDdHgL-qvVWgxDKOfiH9Ki2f69-RpD9Z0&callback=initMap" async defer></script>
+  <script src="script.js"></script>
+</body>
+</html>
